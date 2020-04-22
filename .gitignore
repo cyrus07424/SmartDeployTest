@@ -1,0 +1,12 @@
+/node_modules/*
+
+# 本開発ディレクトリ
+## プロジェクト
+/src/*
+!/src/.gitkeep
+## 素材制作用
+/assets/*
+!/assets/*.md
+!/assets/*.txt
+
+# /docs はデプロイ用に使用する。

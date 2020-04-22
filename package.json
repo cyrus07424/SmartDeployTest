@@ -1,0 +1,23 @@
+{
+  "name": "rpgmv-smartdeploy",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/katai5plate/RPGMV-SmartDeploy-forWEB/",
+  "author": "katai5plate <katai5plate.sub@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "setup": "yarn install && yarn decode",
+    "decode": "node scripts/setup",
+    "build": "node scripts/deploy",
+    "server:deploy": "yarn test && yarn build",
+    "server:deploy:redecode": "rm -rf src/ && yarn decode && yarn test && yarn build",
+    "clean": "yarn cache clean",
+    "reset": "rm -rf node_modules && yarn install",
+    "reset:win": "rd /s/q node_modules && yarn install",
+    "test": "node scripts/pathChecker"
+  },
+  "dependencies": {
+    "fs-extra": "^6.0.1",
+    "path": "^0.12.7"
+  }
+}
